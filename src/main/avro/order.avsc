@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "Order",
+  "namespace": "org.example.model",
+  "fields": [
+    { "name": "id", "type": "string" },
+    { "name": "date", "type": "long" },
+    { "name": "customer", "type": "org.example.model.Customer" },
+    { "name":  "items", "type": {
+        "type": "array",
+        "items": {
+          "name": "orderItem",
+          "type" : "record",
+          "fields": [
+            { "name": "productId", "type": "string" },
+            { "name": "quantity", "type": "int"}
+          ]
+        }
+      }
+    }
+  ]
+}

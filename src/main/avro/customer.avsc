@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "Customer",
+  "namespace": "org.example.model",
+  "fields": [
+    { "name": "id", "type": "string" },
+    { "name": "name", "type": "string" },
+    { "name": "surname", "type": "string" }
+  ]
+}
