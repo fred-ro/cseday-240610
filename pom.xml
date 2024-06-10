@@ -49,9 +49,10 @@
                     <userInfoConfig>${schemaRegistryBasicAuthUserInfo}</userInfoConfig>
                     <outputDirectory>src/main/avro</outputDirectory>
                     <subjects>
-                        <order>src/main/avro/order.avsc</order>
-                        <product>src/main/avro/product.avsc</product>
-                        <customer>src/main/avro/customer.avsc</customer>
+                        <order-value>src/main/avro/order.avsc</order-value>
+                        <orderNoRef-value>src/main/avro/orderNoRef.avsc</orderNoRef-value>
+                        <product-value>src/main/avro/product.avsc</product-value>
+                        <customer-value>src/main/avro/customer.avsc</customer-value>
                     </subjects>
                     <schemaTypes>
                         <order>AVRO</order>
@@ -59,13 +60,13 @@
                         <customer>AVRO</customer>
                     </schemaTypes>
                     <references>
-                        <order>
+                        <order-value>
                             <reference>
                                 <name>org.example.model.Customer</name>
-                                <subject>customer</subject>
+                                <subject>customer-value</subject>
                                 <version>1</version>
                             </reference>
-                        </order>
+                        </order-value>
                     </references>
                     <compatibilityLevels>NONE</compatibilityLevels>
                     <messagePath/>

@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "OrderNoRef",
+  "namespace": "org.example.model",
+  "fields": [
+    { "name": "id", "type": "string" },
+    { "name": "date", "type": "long" },
+    { "name": "customer",
+      "type": {
+        "name": "customer",
+        "type": "record",
+        "fields": [
+          { "name": "id", "type": "string" },
+          { "name": "name", "type": "string" },
+          { "name": "surname", "type": "string" }
+        ]
+     }
+    },
+    { "name":  "items", "type": {
+        "type": "array",
+        "items": {
+          "name": "orderItem",
+          "type" : "record",
+          "fields": [
+            { "name": "productId", "type": "string" },
+            { "name": "quantity", "type": "int"}
+          ]
+        }
+      }
+    }
+  ]
+}
